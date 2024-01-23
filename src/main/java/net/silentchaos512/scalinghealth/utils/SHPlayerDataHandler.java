@@ -25,6 +25,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.world.EnumDifficulty;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.fml.common.Loader;
@@ -234,6 +235,10 @@ public final class SHPlayerDataHandler {
             if (player != null) {
                 // Difficulty disabled via game rule?
                 if (!player.world.getGameRules().getBoolean(ScalingHealth.GAME_RULE_DIFFICULTY)) {
+                    return;
+                }
+                // Increment difficulty in Peaceful mode disabled?
+                if (!Config.Difficulty.incrementDifficultyPeaceful && player.world.getDifficulty() == EnumDifficulty.PEACEFUL) {
                     return;
                 }
                 // Multiplier for this dimension?

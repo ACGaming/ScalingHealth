@@ -582,6 +582,10 @@ public class Config extends ConfigBaseNew {
         @ConfigOption.BooleanDefault(false)
         @ConfigOption.Comment("If true, the difficulty a mob is spawned with will be \"consumed\" when given health/damage bonuses and potion effects (as in older versions).")
         public static boolean statsConsumeDifficulty;
+        @ConfigOption(name = "Increment Difficulty In Peaceful Mode", category = CAT_DIFFICULTY)
+        @ConfigOption.BooleanDefault(true)
+        @ConfigOption.Comment("If true, the difficulty will also be incremented when the world's difficulty is set to Peaceful.")
+        public static boolean incrementDifficultyPeaceful;
 
         public static final Map<String, Integer> DIFFICULTY_BY_GAME_STAGES = new HashMap<>();
         private static final String[] DEFAULT_DIFFICULTY_LUNAR_MULTIPLIERS = new String[]{

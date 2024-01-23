@@ -3,9 +3,15 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.43] - 2024-01-23
+### Added
+- Increment difficulty in peaceful mode config
+### Fixed
+- Scaling health types of MULTI do not appear to scale health [SilentChaos512#202]
+
 ## [1.3.42] - 2019-10-26
 ### Fixed
-- Players receiving min health instead of starting health on new worlds [#202]
+- Players receiving min health instead of starting health on new worlds [SilentChaos512#202]
 
 ## [1.3.41] - 2019-10-25
 ### Added
@@ -18,20 +24,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.3.39] - 2019-08-02
 ### Fixed
-- Crash when setting a game stage not in the config (Game Stages) [#184]
+- Crash when setting a game stage not in the config (Game Stages) [SilentChaos512#184]
 - Possible client crash
 
 ## [1.3.38] - 2019-06-19
 ### Added
-- Config to disable WIT compatibility [#178]
-- Copied needed WIT API classes into this mod, which should prevent crashes if another mod uses the "wit" mod ID. Disable the config if needed. [#178]
+- Config to disable WIT compatibility [SilentChaos512#178]
+- Copied needed WIT API classes into this mod, which should prevent crashes if another mod uses the "wit" mod ID. Disable the config if needed. [SilentChaos512#178]
 
 ## [1.3.37] - 2019-06-05
 Update zh_cn translation (XuyuEre)
 ### Added
 - Config for fixed blight chance. When enabled, blight spawn chances will be a fixed rate, instead of scaling with difficulty. Works even if difficulty is disabled.
 - Mobs processed counter to debug overlay
-- Mods can now spawn difficulty-exempt mobs by setting the `scalinghealth:difficulty` NBT short tag to -1 [#176]
+- Mods can now spawn difficulty-exempt mobs by setting the `scalinghealth:difficulty` NBT short tag to -1 [SilentChaos512#176]
 - (API) Method to spawn difficulty-exempt mobs, which does the same as the above item
 
 ## [1.3.36] - 2019-05-23
@@ -41,35 +47,35 @@ Update zh_cn translation (XuyuEre)
 ### Changed
 - The "all mobs are blights" config will now work even if max difficulty is zero
 ### Fixed
-- Should prevent random crash [#172]
+- Should prevent random crash [SilentChaos512#172]
 - Creepers losing health when becoming blights
 
 ## [1.3.35] - 2019-05-19
 ### Added
-- Config to add fixed values or multipliers to specific dimensions (Dimension Value Factor under difficulty category) [#154]
+- Config to add fixed values or multipliers to specific dimensions (Dimension Value Factor under difficulty category) [SilentChaos512#154]
 ### Changed
 - Copied es_VE.lang to other Spanish regions
 ### Fixed
-- Cave spiders not poisoning players [#171]. This will still be broken if any extra scaling is applied to mob damage (does not include increases from difficulty)
+- Cave spiders not poisoning players [SilentChaos512#171]. This will still be broken if any extra scaling is applied to mob damage (does not include increases from difficulty)
 - Difficulty meter not showing area difficulty values beyond the max
 
 ## [1.3.34] - 2019-04-08
 Set minimum Forge version to 2779 to stop the crashes
 ### Added
 - Config to set blights immune to suffocation damage (enabled by default)
-- Config to override the sleep warning message with a custom one [#164]
+- Config to override the sleep warning message with a custom one [SilentChaos512#164]
 - Health text style SOLID, which can be set to any color
 ### Fixed
-- (Maybe) ConcurrentModificationException in [#162]
+- (Maybe) ConcurrentModificationException in [SilentChaos512#162]
 
 ## [1.3.33] - 2019-02-17
 ### Added
-- Config to disable heart color looping [#155]
-- Config to scale player bonus regen with max health [#147]
+- Config to disable heart color looping [SilentChaos512#155]
+- Config to scale player bonus regen with max health [SilentChaos512#147]
 ### Fixed
-- Crash when connecting to servers in some cases [#157]
-- Heart container drops not respecting doMobLoot game rule [#156]
-- Should fix damage scaling log spam with certain sources [#152] 
+- Crash when connecting to servers in some cases [SilentChaos512#157]
+- Heart container drops not respecting doMobLoot game rule [SilentChaos512#156]
+- Should fix damage scaling log spam with certain sources [SilentChaos512#152] 
 
 ## [1.3.32] - 2019-01-07
 ### Added
@@ -91,7 +97,7 @@ Set minimum Forge version to 2779 to stop the crashes
 - Configs to enable/disable healing events for items. These are now enabled by default (they were disabled for some reason, disable if you have issues)
 - Track number of heart containers used in statistics (unable to do other items at this time)
 ### Fixed
-- A possible (rare?) crash when joining a LAN game or server [#141]
+- A possible (rare?) crash when joining a LAN game or server [SilentChaos512#141]
 
 2018-10-13: Changing style, renamed from changelog.txt to CHANGELOG.md. Remainder of file is left unchanged.
 
