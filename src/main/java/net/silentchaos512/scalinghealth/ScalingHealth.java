@@ -35,7 +35,7 @@ public class ScalingHealth implements IModBase {
     public static final String MOD_ID_LOWER = "scalinghealth";
     public static final String MOD_NAME = "Scaling Health";
     public static final String VERSION = "1.3.43";
-    public static final String VERSION_SILENTLIB = "3.0.14";
+    public static final String VERSION_SILENTLIB = "3.0.13";
     public static final int BUILD_NUM = 0;
     public static final String DEPENDENCIES = "required-after:forge@[14.23.5.2779,);required-after:silentlib@[" + VERSION_SILENTLIB + ",);after:morpheus";
     public static final String RESOURCE_PREFIX = MOD_ID_LOWER + ":";
