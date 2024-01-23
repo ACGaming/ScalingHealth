@@ -3,7 +3,7 @@ buildscript {
         jcenter()
         maven {
             name = 'forge'
-            url = 'http://files.minecraftforge.net/maven'
+            url = 'https://maven.minecraftforge.net'
         }
         maven {
             name = 'gradle'
@@ -11,7 +11,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.minecraftforge.gradle:${project.fg_version}"
+        classpath "com.anatawa12.forge:${project.fg_version}"
     }
 }
 
@@ -106,22 +106,22 @@ minecraft {
 }
 
 repositories {
-    jcenter()
     mavenCentral()
     maven { // JEI
         name = "Progwml6 maven"
-        url = "http://dvs1.progwml6.com/files/maven"
+        url = "https://dvs1.progwml6.com/files/maven"
     }
     maven { // JEI mirror
         name = "ModMaven"
-        url = "modmaven.k-4u.nl"
+        url = "https://modmaven.dev"
     }
     maven {
-        name "Cyclops Repo"
-        url "https://oss.jfrog.org/artifactory/simple/libs-release/"
+        name = "Minecraft Mod Development Maven"
+        url = "https://maven.mcmoddev.com"
     }
-    repositories {
-        maven { url 'https://maven.mcmoddev.com' }
+    maven {
+        name = "Curse Maven"
+        url = "https://cursemaven.com"
     }
 }
 
@@ -135,11 +135,14 @@ dependencies {
     runtime "mezz.jei:jei_${project.mc_version}:${project.jei_version}"
 
     // Silent Lib
-    compile "net.silentchaos512:silent-lib:3.0+"
+    compile "curse.maven:silent-lib-242998:2851111"
 
     // Game Stages
     compile "net.darkhax.gamestages:GameStages-${project.mc_version}:${project.gamestages_version}"
-    runtime "net.darkhax.bookshelf:Bookshelf-1.12.2:2.3.552"
+    runtime "net.darkhax.bookshelf:Bookshelf-${project.mc_version}:${project.bookshelf_version}"
+
+    // Morpheus
+    compile "curse.maven:morpheus-69118:2664449"
 }
 
 processResources {
